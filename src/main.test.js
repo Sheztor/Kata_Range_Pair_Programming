@@ -43,7 +43,7 @@ function measureExecutionTime(func, input) {
 }
 
 test("Compare execution speed of DeadAnts and DeadAntsOld", () => {
-  const input = "'antantatnatattatatatatantantat".repeat(1000);
+  const input = "'antantatnatattatatatatantantat".repeat(10000);
   const timeOld = measureExecutionTime(DeadAntsOld, input);
   const timeNew = measureExecutionTime(DeadAnts, input);
  
