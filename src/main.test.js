@@ -37,10 +37,18 @@ test("Returns 1 if the entry contains an 'an' at the end", () =>{
 })
 
 
-// test("Compare execution speed of DeadAnts and DeadAntsOld", () => {
-//   const input = "'antantatnatattatatatatantantat".repeat(10000);
-//   const timeOld = measureExecutionTime(DeadAntsOld, input);
-//   const timeNew = measureExecutionTime(DeadAnts, input);
+test("DeadAnts execution speed is faster than DeadAntsOld", () => {
+  const input = "antantatnatattatatatatantantat".repeat(10000);
+  const timeOld = measureExecutionTime(DeadAntsOld, input);
+  const timeNew = measureExecutionTime(DeadAnts, input);
  
-//   expect(timeNew).toBeLessThan(timeOld);
-// });
+  expect(timeNew).toBeLessThan(timeOld);
+});
+
+test("DeadAntsOld function runs longer than DeadAnts", () => {
+  const input = "antantatnatattatatatatantantat".repeat(10000);
+  const timeOld = measureExecutionTime(DeadAntsOld, input);
+  const timeNew = measureExecutionTime(DeadAnts, input);
+ 
+  expect(timeOld).toBeGreaterThan(timeNew);
+});
