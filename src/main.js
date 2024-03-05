@@ -1,5 +1,5 @@
 function DeadAnts(ants){
-   if(!ants || typeof ants !=="string") return -1;
+   if(!ants || typeof ants !=="string") return 0;
 
    let countA = 0, countN = 0, countT = 0
    const lengthAnst = ants.length

@@ -2,7 +2,6 @@ function CountDeadAnts(ants) {
   if(ants !== null) ants = ants.toString().replace(/ant/g, "") // Delete all ants
 
   if(ants === null || ants.trim() === "") return 0
-  if(!ants || typeof ants !=="string") return 0;
 
   const heads = ants.split(/a/g).length - 1
   const bodies = ants.split(/n/g).length - 1
