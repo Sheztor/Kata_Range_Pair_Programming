@@ -3,7 +3,6 @@ const DeadAntsOld = require('./anterior');
 const measureExecutionTime = require('./performance');
 
 
-
 // test("Return -1 if the string is null", () =>{
 //     expect(DeadAnts(null)).toBe(-1);
 // })
@@ -33,18 +32,11 @@ const measureExecutionTime = require('./performance');
 //   expect(DeadAnts("'Helo world'")).toBe(0);
 // })
 
-function measureExecutionTime(func, input) {
-  const startTime = performance.now();
-  func(input);
-  const endTime = performance.now();
-  return endTime - startTime;
-}
 
 test("Compare execution speed of DeadAnts and DeadAntsOld", () => {
   const input = "'antantatnatattatatatatantantat".repeat(10000);
   const timeOld = measureExecutionTime(DeadAntsOld, input);
   const timeNew = measureExecutionTime(DeadAnts, input);
  
-  
   expect(timeNew).toBeLessThan(timeOld);
 });
