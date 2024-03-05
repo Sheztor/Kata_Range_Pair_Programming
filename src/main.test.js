@@ -18,10 +18,6 @@ const DeadAntsOld = require('./anterior');
 //     expect(DeadAnts(12)).toBe(-1);
 // })
 
-// test("Return 1 if the input has a dead ant", () =>{
-//   expect(DeadAnts("ant ant nt")).toBe(1);
-// })
-
 
 // test("Return 2 if the input has 2 dead ants", () =>{
 //   expect(DeadAnts("an ant ant tn")).toBe(2);
