@@ -1,5 +1,7 @@
 const DeadAnts = require("./main");
 const DeadAntsOld = require('./anterior');
+const measureExecutionTime = require('./performance');
+
 
 
 // test("Return -1 if the string is null", () =>{

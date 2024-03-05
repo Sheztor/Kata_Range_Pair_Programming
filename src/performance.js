@@ -4,3 +4,5 @@ function measureExecutionTime(func, input) {
   const endTime = performance.now();
   return endTime - startTime;
 }
+
+module.exports = measureExecutionTime
