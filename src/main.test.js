@@ -3,20 +3,20 @@ const DeadAntsOld = require('./anterior');
 const measureExecutionTime = require('./performance');
 
 
-test("Return -1 if the string is null", () =>{
-    expect(DeadAnts(null)).toBe(-1);
+test("Return 0 if the string is null", () =>{
+    expect(DeadAnts(null)).toBe(0);
 })
 
-test("Return -1 if the string is undefined", () =>{
-    expect(DeadAnts(undefined)).toBe(-1);
+test("Return 0 if the string is undefined", () =>{
+    expect(DeadAnts(undefined)).toBe(0);
 })
 
-test("Return -1 if the string is empty", () =>{
-    expect(DeadAnts("")).toBe(-1);
+test("Return 0 if the string is empty", () =>{
+    expect(DeadAnts("")).toBe(0);
 })
 
-test("Return -1 if the input is not a string", () =>{
-    expect(DeadAnts(12)).toBe(-1);
+test("Return 0 if the input is not a string", () =>{
+    expect(DeadAnts(12)).toBe(0);
 })
 
 
