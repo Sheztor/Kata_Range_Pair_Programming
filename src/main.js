@@ -1,26 +1,24 @@
 function DeadAnts(ants){
    if(!ants || typeof ants !=="string") return -1;
 
-   let countA = 0;
-   let countN = 0;
-   let countT = 0;
+   let countA = 0, countN = 0, countT = 0
+   const lengthAnst = ants.length
 
-   for (let i = 0; i < ants.length; i++) {
-      if (ants.substring(i, 3) === 'ant') {
-          i += 2; // Saltar las letras 'a', 'n', 't'
-      } else {
-          if (ants[i] === 'a') countA++;
-          if (ants[i] === 'n') countN++;
-          if (ants[i] === 't') countT++;
-      }
+   for (let i = 0; i < lengthAnst; i++) {
+    const currentChar = ants[i]
+    
+    if (ants[i] === "a" && ants[i+1] === "n" && ants[i+2] === "t") {
+      i += 2
+      continue
+    } // ant 
+
+    if(currentChar === "a") countA++
+    else if (currentChar === "n") countN++
+    else if (currentChar === "t") countT++
+
   }
 
    return Math.max(countA, countN, countT)
-
-   // let deadAnts = countA
-   // if(countA < countN) deadAnts = countN
-   // if(countN < countT) deadAnts = countT
-   // return deadAnts;
 
 }
 
