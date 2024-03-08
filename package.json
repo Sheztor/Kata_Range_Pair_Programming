@@ -1,9 +1,11 @@
 {
   "devDependencies": {
     "jest": "^29.7.0"
-
   },
   "scripts": {
     "test": "jest"
+  },
+  "dependencies": {
+    "benchmark": "^2.1.4"
   }
 }
